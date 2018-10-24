@@ -6,7 +6,7 @@ let app = express();
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 
-const PORT = 3000;
+let PORT = process.env.Port|| 3000;
 /*first argument is the root route the second arg is an action it takes request and response. */
 app.get("/", function(req, res){
     //this join method will take the dirname and add view to it. 
